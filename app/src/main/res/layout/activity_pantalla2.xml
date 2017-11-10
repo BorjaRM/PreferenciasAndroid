@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.borja.preferencias.Pantalla2">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:layout_marginRight="13dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:weightSum="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="6dp">
+
+
+        <TextView
+            android:id="@+id/textPreferencias"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Preferencias guardadas:"
+            android:textSize="40px" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/textNom"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Nombre:" />
+
+        <EditText
+            android:id="@+id/editTextNom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:singleLine="false" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/textDni"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="DNI:" />
+
+        <EditText
+            android:id="@+id/editTextDni"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="text"
+            android:singleLine="false" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/textFnac"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Fecha de nacimiento:" />
+
+        <EditText
+            android:id="@+id/editTextFnac"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="text"
+            android:singleLine="false" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Sexo:" />
+
+        <EditText
+            android:id="@+id/editTextSexo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="text"
+            android:singleLine="false" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Button
+            android:id="@+id/buttonVolver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancelar" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
