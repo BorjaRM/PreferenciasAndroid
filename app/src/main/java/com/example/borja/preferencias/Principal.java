@@ -3,24 +3,19 @@ package com.example.borja.preferencias;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Principal extends AppCompatActivity implements View.OnClickListener, RadioGroup.OnCheckedChangeListener{
+public class Principal extends AppCompatActivity implements View.OnClickListener{
     public static final String PREFS = "My preferences";
     private Button botonEnviar;
-    private EditText txtNombre, txtDni, txtFnac;
-    private RadioGroup radioGroupSexo;
-    private String sexo;
+    private EditText txtDia, txtMes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,16 +27,13 @@ public class Principal extends AppCompatActivity implements View.OnClickListener
     }
 
     private void getViews() {
-        txtNombre = (EditText) findViewById(R.id.editTextNom);
-        txtDni = (EditText) findViewById(R.id.editTextDni);
-        txtFnac = (EditText) findViewById(R.id.editTextFnac);
-        radioGroupSexo = (RadioGroup) findViewById(R.id.radioGroup);
+        txtDia = (EditText) findViewById(R.id.editTextDia);
+        txtMes = (EditText) findViewById(R.id.editTextMes);
         botonEnviar = (Button)findViewById(R.id.buttonEnviar);
     }
 
     private void setController() {
         botonEnviar.setOnClickListener(this);
-        radioGroupSexo.setOnCheckedChangeListener(this);
     }
 
     @Override
@@ -68,10 +60,8 @@ public class Principal extends AppCompatActivity implements View.OnClickListener
     private HashMap<String, String> getUserPreferences() {
         HashMap<String,String> userPreferences = new HashMap<String,String>();
 
-        userPreferences.put("nombre",txtNombre.getText().toString());
-        userPreferences.put("dni",txtDni.getText().toString());
-        userPreferences.put("fechaNacimiento",txtFnac.getText().toString());
-        userPreferences.put("sexo",this.sexo);
+        userPreferences.put("dia", txtDia.getText().toString());
+        userPreferences.put("mes", txtMes.getText().toString());
 
         return userPreferences;
     }
@@ -80,15 +70,5 @@ public class Principal extends AppCompatActivity implements View.OnClickListener
         for (Map.Entry<String, String> p : prefs.entrySet()) {
             editor.putString(p.getKey(),p.getValue());
         }
-    }
-
-    @Override
-    public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
-        // Obtenemos el id del radio button seleccionado
-        int selectedId = group.getCheckedRadioButtonId();
-        // Encontramos el radio a partir del id anterior
-        RadioButton radio = (RadioButton) findViewById(selectedId);
-        // Seteamos el valor de la variable que pasaremos a Pantalla2
-        sexo = (String) radio.getText();
     }
 }

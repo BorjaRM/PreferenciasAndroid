@@ -33,10 +33,10 @@
             android:id="@+id/textNom"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="Nombre:" />
+            android:text="Dia:" />
 
         <EditText
-            android:id="@+id/editTextNom"
+            android:id="@+id/editTextDia"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:ems="10"
@@ -51,55 +51,15 @@
             android:id="@+id/textDni"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="DNI:" />
+            android:text="Mes:" />
 
         <EditText
-            android:id="@+id/editTextDni"
+            android:id="@+id/editTextMes"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:ems="10"
             android:inputType="text"
             android:singleLine="false" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
-
-        <TextView
-            android:id="@+id/textFnac"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:text="Fecha de nacimiento:" />
-
-        <EditText
-            android:id="@+id/editTextFnac"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:ems="10"
-            android:inputType="text"
-            android:singleLine="false" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="Sexo:" />
-
-        <EditText
-            android:id="@+id/editTextSexo"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:ems="10"
-            android:inputType="text"
-            android:singleLine="false" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
 
         <Button
             android:id="@+id/buttonVolver"

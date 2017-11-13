@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class Pantalla2 extends AppCompatActivity implements View.OnClickListener{
     private Button botonVolver;
-    private EditText txtNombre, txtDni, txtFnac, txtSexo;
+    private EditText txtDia, txtMes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +24,8 @@ public class Pantalla2 extends AppCompatActivity implements View.OnClickListener
     }
 
     private void getViews() {
-        txtNombre = (EditText) findViewById(R.id.editTextNom);
-        txtDni = (EditText) findViewById(R.id.editTextDni);
-        txtFnac = (EditText) findViewById(R.id.editTextFnac);
-        txtSexo = (EditText) findViewById(R.id.editTextSexo);
+        txtDia = (EditText) findViewById(R.id.editTextDia);
+        txtMes = (EditText) findViewById(R.id.editTextMes);
         botonVolver = (Button)findViewById(R.id.buttonVolver);
     }
 
@@ -36,10 +34,8 @@ public class Pantalla2 extends AppCompatActivity implements View.OnClickListener
         SharedPreferences mySharedPreferences = getSharedPreferences(Principal.PREFS, Activity.MODE_PRIVATE);
 
         // Mostramos en cada view el contenido guardado en las preferencias
-        txtNombre.setText(mySharedPreferences.getString("nombre",""));
-        txtDni.setText(mySharedPreferences.getString("dni",""));
-        txtFnac.setText(mySharedPreferences.getString("fechaNacimiento",""));
-        txtSexo.setText(mySharedPreferences.getString("sexo",""));
+        txtDia.setText(mySharedPreferences.getString("dia",""));
+        txtMes.setText(mySharedPreferences.getString("mes",""));
     }
 
     private void setController() {
@@ -56,9 +52,7 @@ public class Pantalla2 extends AppCompatActivity implements View.OnClickListener
 
     private void disableOptions() {
         // Deshabilitamos los Views ya que no queremos que se pueda modificar su contenido en esta Activity
-        txtNombre.setEnabled(false);
-        txtDni.setEnabled(false);
-        txtFnac.setEnabled(false);
-        txtSexo.setEnabled(false);
+        txtDia.setEnabled(false);
+        txtMes.setEnabled(false);
     }
 }

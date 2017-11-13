@@ -20,14 +20,14 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="Nombre:" />
+            android:text="Ultima fecha:" />
 
         <EditText
-            android:id="@+id/editTextNom"
+            android:id="@+id/editTextDia"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:ems="10"
-            android:hint="Escribe tu nombre"
+            android:hint="Introduce el dia"
             android:inputType="textPersonName"
             android:singleLine="false" />
 
@@ -35,73 +35,15 @@
             android:layout_width="match_parent"
             android:layout_height="20dp" />
 
-        <TextView
-            android:id="@+id/textDni"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:text="DNI:" />
-
         <EditText
-            android:id="@+id/editTextDni"
+            android:id="@+id/editTextMes"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:ems="10"
-            android:hint="Introduce tu dni"
+            android:hint="Introduce el mes"
             android:inputType="textPersonName"
             android:singleLine="false" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
-
-        <TextView
-            android:id="@+id/textFnac"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="Fecha de nacimiento:" />
-
-        <EditText
-            android:id="@+id/editTextFnac"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.44"
-            android:ems="10"
-            android:hint="dd/mm/aaaa"
-            android:inputType="date" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="Sexo:" />
-
-
-        <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="match_parent"
-            android:layout_height="60dp">
-
-            <RadioButton
-                android:id="@+id/radioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:text="Masculino" />
-
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                android:text="Femenino" />
-        </RadioGroup>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
 
         <Button
             android:id="@+id/buttonEnviar"
